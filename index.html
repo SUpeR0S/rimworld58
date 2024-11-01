@@ -13,7 +13,7 @@
     <title>RimWorld58</title>
     <script type="text/javascript">
         const itemListURL = "https://raw.githubusercontent.com/SUpeR0S/rimworld58/rimworld58/main/itemlist.json";
-        const eventListURL = "https://raw.githubusercontent.com/SUpeR0S/rimworld58/rimworld58/main/eventlist.json";
+        const eventListURL = "https://raw.githubusercontent.com/SUpeR0S/rimworld58/refs/heads/main/eventlist.json";
     </script>
 </head>
 
@@ -141,11 +141,15 @@
                                 <button type="button" class="btn btn-primary sort" data-sort="price">
                                     Цена
                                 </button>
+                                <button type="button" class="btn btn-primary sort" data-sort="karmatype">
+                                    Карма
+                                </button>
                             </p>
                             <table class="table events">
                                 <tr>
                                     <th scope="col" class="sort" data-sort="abr">ID</th>
                                     <th scope="col" class="sort" data-sort="price">Цена</th>
+                                    <th scope="col" class="sort" data-sort="karmatype">Тип кармы</th>
                                 </tr>
                                 <tbody class="list">
                                 </tbody>
@@ -171,6 +175,7 @@
             <p class="float-right">
                 <a href="#">Наверх</a>
             </p>
+            <p>Forked by itsrec0very with © Bootstrap</p>
         </div>
     </footer>
     <!-- Optional JavaScript -->
@@ -214,7 +219,7 @@
             position: relative;
             top: -4px;
             right: -5px;
-	
+        }
     </style>
     <script type="text/javascript">
         let itemList = null;
@@ -237,9 +242,9 @@
         let eventList = null;
         $.getJSON(eventListURL, function(data) {
             var options = {
-                valueNames: ['abr', 'price'],
-                item: '<tr><td class="abr" scope="row"></td><td class="price"></td></tr>
-			};
+                valueNames: ['abr', 'price', 'karmatype'],
+                item: '<tr><td class="abr" scope="row"></td><td class="price"></td><td class="karmatype"></td></tr>'
+            };
 
             var eventData = [];
             $.each(data.incitems, function(index, value) {
