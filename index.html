@@ -141,15 +141,11 @@
                                 <button type="button" class="btn btn-primary sort" data-sort="price">
                                     Цена
                                 </button>
-                                <button type="button" class="btn btn-primary sort" data-sort="karmatype">
-                                    Карма
-                                </button>
                             </p>
                             <table class="table events">
                                 <tr>
                                     <th scope="col" class="sort" data-sort="abr">ID</th>
                                     <th scope="col" class="sort" data-sort="price">Цена</th>
-                                    <th scope="col" class="sort" data-sort="karmatype">Тип кармы</th>
                                 </tr>
                                 <tbody class="list">
                                 </tbody>
@@ -175,7 +171,6 @@
             <p class="float-right">
                 <a href="#">Наверх</a>
             </p>
-            <p>Forked by itsrec0very with © Bootstrap</p>
         </div>
     </footer>
     <!-- Optional JavaScript -->
@@ -243,7 +238,7 @@
         $.getJSON(eventListURL, function(data) {
             var options = {
                 valueNames: ['abr', 'price'],
-                item: '<tr><td class="abr" scope="row"></td><td class="price"></td>
+                item: '<tr><td class="abr" scope="row"></td><td class="price"></td></tr>
 			};
 
             var eventData = [];
