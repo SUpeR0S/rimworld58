@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
     <title>RWorldBot</title>
     <script type="text/javascript">
-        const itemListURL = "https://raw.githubusercontent.com/itsrec0very/rworldbot/master/itemlist.json";
+        const itemListURL = "https://raw.githubusercontent.com/SUpeR0S/rimworld58/refs/heads/main/itemlist.json";
         const eventListURL = "https://raw.githubusercontent.com/SUpeR0S/rimworld58/refs/heads/main/eventlist.json";
     </script>
 </head>
@@ -242,9 +242,9 @@
         let eventList = null;
         $.getJSON(eventListURL, function(data) {
             var options = {
-                valueNames: ['abr', 'price', 'karmatype'],
-                item: '<tr><td class="abr" scope="row"></td><td class="price"></td><td class="karmatype"></td></tr>'
-            };
+                valueNames: ['abr', 'price'],
+                item: '<tr><td class="abr" scope="row"></td><td class="price"></td>
+			};
 
             var eventData = [];
             $.each(data.incitems, function(index, value) {
